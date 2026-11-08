@@ -5,7 +5,7 @@ from pathlib import Path
 from datetime import datetime
 
 DATAFILE = os.environ.get("DATAFILE", "servers.json")
-VALID_ENVIRONMENTS = ["prod", "dev", "test"]
+VALID_ENVIRONMENTS = ["production", "development", "test"]
 
 def load_servers():
     if not os.path.exists(DATAFILE):
@@ -36,8 +36,14 @@ def find_server(servers, name):
             return server
     return None
 
-def is_valid_environment(env):
-    return env in VALID_ENVIRONMENTS
+def find_server_or_report(servers, name):
+    server = find_server(servers, name)
+    if server is None:
+        print(f"No server named '{name}'.")
+    return server
+
+def is_valid_environment(environment):
+    return environment in VALID_ENVIRONMENTS
 
 
 def add_server(servers, name, address, environment, role):

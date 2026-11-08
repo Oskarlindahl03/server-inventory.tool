@@ -18,6 +18,7 @@ def check_server_status(server):
     else:
         server["status"] = "down"
     server["last_checked"] = datetime.now().strftime("%Y-%m-%d %H:%M")
+        
 
 def check_all_server_status(servers):
     for server in servers:
