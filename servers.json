@@ -1,34 +1,10 @@
 [
     {
-        "name": "web01",
-        "address": "example.com",
-        "environment": "production",
-        "role": "web server",
-        "status": "up",
-        "last_checked": "2026-11-08 22:19"
-    },
-    {
-        "name": "db01",
-        "address": "127.0.0.1",
-        "environment": "production",
-        "role": "database",
-        "status": "up",
-        "last_checked": "2026-11-08 22:19"
-    },
-    {
-        "name": "test01",
-        "address": "192.0.2.10",
-        "environment": "test",
-        "role": "test server",
-        "status": "down",
-        "last_checked": "2026-11-08 22:19"
-    },
-    {
         "name": "dev01",
         "address": "localhost",
         "environment": "development",
-        "role": "development server",
-        "status": "up",
-        "last_checked": "2026-11-08 22:19"
+        "role": "dev",
+        "status": "unknown",
+        "last_checked": ""
     }
 ]
